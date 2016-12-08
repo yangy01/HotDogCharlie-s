@@ -1,10 +1,13 @@
 
 header {
-	padding: 1em;
     color: white;
-    background-color: black;
     clear: left;
     text-align: right;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 60%;
+    margin: auto;
 }
 
 footer {
