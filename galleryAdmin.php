@@ -1,3 +1,10 @@
+<?php
+        session_start();
+        if (!isset($_SESSION['name'])) {
+            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/gallery.html");
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +24,11 @@
 <p>
 <nav>
   <ul>
-    <li><a class="active" href="mainAdmin.html">Home</a></li>
-    <li><a href="aboutAdmin.html">About Us</a></li>
+    <li><a class="active" href="mainAdmin.php">Home</a></li>
+    <li><a href="aboutAdmin.php">About Us</a></li>
     <li><a href="menuAdmin.php">Menu</a></li>
-    <li><a href="caterAdmin.html">Catering</a></li>
-    <li><a href="contactAdmin.html">Contact Us</a></li>
+    <li><a href="caterAdmin.php">Catering</a></li>
+    <li><a href="contactAdmin.php">Contact Us</a></li>
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
