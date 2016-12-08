@@ -72,12 +72,19 @@ p.right {
 }
 
 html {
-	background-color: red;
+	background-image: url("Background.JPG");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
-	background-color: red;
-	color: red;
+	background-image: url("Background.JPG");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img {
@@ -90,7 +97,7 @@ div {
 	background-color: white;
 	max-width:60%;
     margin: auto;
-	border-style: solid;
+
 }
 
 ul {
@@ -138,4 +145,44 @@ ul.menuDescription li {
 	font-size: 15px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	list-style-type: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }

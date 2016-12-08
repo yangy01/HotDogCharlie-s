@@ -14,7 +14,7 @@
 <h2>Menu</h2>
 <hr>
 
-<p>
+
 <nav>
   <ul>
     <li><a class="active" href="mainAdmin.html">Home</a></li>
@@ -25,11 +25,10 @@
 	<li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-</p>
+
 <hr>
 
-<p>
-	<ul class="menu">
+
 <?php
 		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
 		
@@ -51,8 +50,20 @@
 <?php
 		}
 ?>
-	</ul>
-</p>
+
+		<form action="menuItems.php" method="post">
+			
+			<div>
+				Old Name: <input type="text" name="oldItem" value="" readonly="readonly" /><br>
+				New Name: <input type="text" name="item" value="" /><br>
+				
+				<textarea name="description" rows="10" cols="30"></textarea><br><br>
+			</div>
+			
+			<input type="submit" />
+			</form>
+
+
 
 <footer>
 	<p class="footerLeft">

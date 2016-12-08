@@ -14,7 +14,7 @@
 <h2>Menu</h2>
 <hr>
 
-<p>
+
 <nav>
   <ul>
     <li><a class="active" href="main.html">Home</a></li>
@@ -25,7 +25,7 @@
 	<li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-</p>
+
 <hr>
 
 	<ul class="menuItem">
