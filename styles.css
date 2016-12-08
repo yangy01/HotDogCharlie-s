@@ -23,6 +23,10 @@ h3.saying {
 	font-family: "Lobster", Helvetica, sans-serif;
 }
 
+h1.headers{
+  color: black;
+  text-align: center;
+}
 
 h1.strokeme {
 	font-size: 50pt;
@@ -185,4 +189,17 @@ ul.menuDescription li {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.submit {
+  background-color: white; 
+  color: black; 
+  border: 2px solid red;
+  font-size: 16px;
+  padding: 15px 32px;
+  border-radius: 12px;
+}
+.submit:hover {
+    background-color: red;
+    color: white;
 }
