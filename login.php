@@ -11,7 +11,9 @@
 	$loginValid = false;
 	foreach ($rows as $row) {
 		if ((strcmp($username,$row['username']) == 0) && (strcmp($password,$row['password']) == 0)) {
-			header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/mainAdmin.html");
+			session_start();
+			$_SESSION['name'] = $username;
+			header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/mainAdmin.php");
 			$loginValid = true;
 		}
 	}

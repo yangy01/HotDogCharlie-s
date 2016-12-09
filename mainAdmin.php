@@ -1,3 +1,10 @@
+<?php
+        session_start();
+        if (!isset($_SESSION['name'])) {
+            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/main.html");
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,31 +13,47 @@
     <meta name="description" content="Web Page Resume">
     <meta name="keywords" content="HTML">
     <meta name="author" content="">
-    <title>Hot Dog Charlie's</title>
+    <title>HotDogCharlie's</title>
 </head>
-<body>
-<div>
 
-<h2>Catering</h2>
+<body>
+
+<header>
+    <h1 class="strokeme">HotDogCharlie's</h1><br>
+    <h3 class="saying">"Home of the World Famous Bacon Sauce"</h3><br>
+	<form action="logout.php" method="post">
+	
+	<input type="submit" value="logout" />
+	</form>
+</header>
+<div>
+<img src="logo.png" alt="logo">
 <hr>
 
 <p>
 <nav>
+
   <ul>
-    <li><a  class="active" href="mainAdmin.html">Home</a></li>
-    <li><a href="aboutAdmin.html">About Us</a></li>
+    <li><a class="active" href="aboutAdmin.php">About Us</a></li>
     <li><a href="menuAdmin.php">Menu</a></li>
-    <li><a href="galleryAdmin.html">Gallery</a></li>
-    <li><a href="contactAdmin.html">Contact Us</a></li>
+    <li><a href="caterAdmin.php">Catering</a></li>
+    <li><a href="galleryAdmin.php">Gallery</a></li>
+    <li><a href="contactAdmin.php">Contact Us</a></li>
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
 </p>
-<hr>
 <p class="hotdog">
     <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
     <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
+<hr>
+
+<p class="left">
+    <b>At Hot Dog Charlie's</b> we believe in only using the finest quality products in our hot dogs
+	and sauces.  Customer service with a smile to brighten your day and a hot dog in every tummy :)
+</p>
+
 
 <footer>
 	<p class="footerLeft">
@@ -48,3 +71,4 @@
 
 
 </html>
+

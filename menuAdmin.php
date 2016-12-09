@@ -1,3 +1,10 @@
+<?php
+	    session_start();
+	    if (!isset($_SESSION['name'])) {
+	    	header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/menu.php");
+	    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,20 +24,41 @@
 
 <nav>
   <ul>
-    <li><a class="active" href="mainAdmin.html">Home</a></li>
-    <li><a href="aboutAdmin.html">About Us</a></li>
-    <li><a href="caterAdmin.html">Catering</a></li>
-    <li><a href="galleryAdmin.html">Gallery</a></li>
-    <li><a href="contactAdmin.html">Contact Us</a></li>
+    <li><a class="active" href="mainAdmin.php">Home</a></li>
+    <li><a href="aboutAdmin.php">About Us</a></li>
+    <li><a href="caterAdmin.php">Catering</a></li>
+    <li><a href="galleryAdmin.php">Gallery</a></li>
+    <li><a href="contactAdmin.php">Contact Us</a></li>
 	<li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-
+<p class="hotdog">
+    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+</p>
 <hr>
-
 
 <?php
 		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+		$rows = $db->query("SELECT * FROM `Specials`");
+
+		foreach ($rows as $row) {
+?>
+<form action="menuSpecials.php" method="post">
+
+<div>
+    <textarea name="sunday" rows="10" cols="30"><?=$row['Sunday']?></textarea>
+    <textarea name="monday" rows="10" cols="30"><?=$row['Monday']?></textarea>
+    <textarea name="tuesday" rows="10" cols="30"><?=$row['Tuesday']?></textarea>
+    <textarea name="wednesday" rows="10" cols="30"><?=$row['Wednesday']?></textarea>
+    <textarea name="thursday" rows="10" cols="30"><?=$row['Thursday']?></textarea>
+    <textarea name="friday" rows="10" cols="30"><?=$row['Friday']?></textarea>
+    <textarea name="saturday" rows="10" cols="30"><?=$row['Saturday']?></textarea><br><br>
+</div>
+<input type="submit" />
+</form>
+<?php
+	}
 		
 		$rows = $db->query("SELECT `Item`, `Description` FROM `Menu`");
 		foreach($rows as $row){

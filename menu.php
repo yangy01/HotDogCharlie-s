@@ -25,13 +25,46 @@
 	<li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-
+<p class="hotdog">
+    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+</p>
 <hr>
 
-	<ul class="menuItem">
 <?php
 		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
-		
+		$rows = $db->query("SELECT * FROM `Specials`");
+
+		foreach ($rows as $row) {
+?>
+
+<table>
+  <tr>
+    <th>Sunday</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+  </tr>
+  <tr>
+    <td><?= $row['Sunday']?></td>
+    <td><?= $row['Monday']?></td>
+    <td><?= $row['Tuesday']?></td>
+    <td><?= $row['Wednesday']?></td>
+    <td><?= $row['Thursday']?></td>
+    <td><?= $row['Friday']?></td>
+    <td><?= $row['Saturday']?></td>
+  </tr>
+</table>
+<?php
+	}
+?>
+
+
+	<ul class="menuItem">
+<?php	
 		$rows = $db->query("SELECT `Item`, `Description` FROM `Menu`");
 		foreach($rows as $row){
 ?>
