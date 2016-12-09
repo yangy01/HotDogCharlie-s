@@ -40,6 +40,33 @@
 <hr>
 
 
+<?php
+        $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+        
+        $rows = $db->query("SELECT `about` FROM `websiteInfo`");
+        foreach($rows as $row){
+            $about = $row['about'];        
+            $about = str_replace("<br>", "", $about);
+?>
+            <form action="adminAboutUs.php" method="post">
+            
+            <div>
+                <textarea name="about" rows="20" cols="50"><?=$about?></textarea><br><br>
+            </div>
+            
+            <input type="submit" />
+            </form>
+            
+<?php
+        }
+?>
+
+<p class="left">
+     <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;">
+    <?=$about?><br><br>
+</p>
+
+
 <footer>
 	<p class="footerLeft">
 		Disclaimer: This site is under development by UW-Oshkosh students as a prototype for
