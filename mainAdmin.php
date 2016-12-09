@@ -22,12 +22,42 @@
 <header>
     <img src="Banner.SVG" alt="HotDogCharlie">
     <h3 class="saying">"Home of the World Famous Bacon Sauce"</h3><br>
+
+<?php
+	$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+
+	$rows = $db->query("SELECT `password` FROM `HotDogUsers`");
+?>
     
     <form action="changePass.php" method="post">
-	   Old Password: <input type="text" name="oldpass" value="" /><br>
+	   Old Password: <input type="text" name="oldpass" value="" onkeyup="checkPassword(this.value)"/><br>
 	   New Password: <input type="text" name="newpass" value="" /><br>
     <input type="submit" value="Change Password" />
 	</form>
+	<p> <span id="confirm"></span></p>
+
+	<script>
+	function checkPassword(str) {
+	  var xhttp;
+	  if (str.length == 0) { 
+	    document.getElementById("confirm").innerHTML = "";
+	    return;
+	  }
+	  xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+<?php
+		foreach($rows as $row){
+?>
+	    if (str == <?=$row['password']?>) {
+	      document.getElementById("confirm").innerHTML = "password match";
+	    }
+<?php
+	}
+?>
+	  };
+	  xhttp.send();   
+	}
+	</script>
     
     <div class="logout">
            <form action="logout.php" method="post">
@@ -36,11 +66,11 @@
     </div><br><br>
 </header>
 <div>
-<p>
+
 <nav>
 
   <ul>
-    <li><a class="active" href="aboutAdmin.php">About Us</a></li>
+    <li><a href="aboutAdmin.php">About Us</a></li>
     <li><a href="menuAdmin.php">Menu</a></li>
     <li><a href="caterAdmin.php">Catering</a></li>
     <li><a href="galleryAdmin.php">Gallery</a></li>
@@ -48,16 +78,13 @@
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-</p>
+
 <p class="hotdog">
     <img src="Hotdog.SVG" alt=Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
     <img src="Hotdog.SVG" alt=Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
-<hr>
 
-<?php
-		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
-		
+<?php	
 		$rows = $db->query("SELECT `mission` FROM `websiteInfo`");
 		foreach($rows as $row){
             $data = $row['mission'];
@@ -78,7 +105,7 @@
 
 <p class="left">
      <img src="Group.JPG" alt="group" style="width: 50%;height: 50%;">
-    <?=$data?><br><br>
+     <br><br><?=$data?><br>
 </p>
 
 

@@ -17,14 +17,13 @@
 <header>
     <img src="Banner.SVG" alt="HotDogCharlies">
     <h3 class="saying">"Home of the World Famous Bacon Sauce"</h3><br>
-	<form class="login" action="login.php" method="post" align="right">
+	<form class="login" action="login.php" method="post">
 		
 			User Name: <input type="text" name="username"  /><br>
 			Password: <input type="password" name="password"  /><br>
 			
 		
-	
-	<input type="submit" value="login"/>
+	<button class="button lo">login</button>
 	</form>
 </header>
 
@@ -34,11 +33,11 @@
 </p>
 <div>
 
-<p>
+
 <nav>
 
   <ul>
-    <li><a class="active" href="about.php">About Us</a></li>
+    <li><a href="about.php">About Us</a></li>
     <li><a href="menu.php">Menu</a>  </li>
     <li><a href="cater.php">Catering</a> </li>
     <li><a href="gallery.php">Gallery</a></li>
@@ -46,8 +45,6 @@
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-</p>
-<hr>
 
 <?php
         $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
@@ -63,7 +60,7 @@
 <p id="left">
   
     <img src="Group.JPG" alt="group" style="width: 50%;height: 50%;">
-    <?=$data?><br><br>
+    <br><br><?=$data?><br>
 </p>
 
 

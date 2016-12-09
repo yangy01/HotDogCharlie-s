@@ -9,11 +9,11 @@
     <title>Hot Dog Charlie's</title>
 </head>
 
-
+<body> 
     
 <header>
     <img src="Banner.SVG" alt="banner">
-	<form class="login" action="login.php" method="post" align="right">
+	<form class="login" action="login.php" method="post">
 		
 			User Name: <input type="text" name="username"  /><br>
 			Password: <input type="password" name="password"  /><br>
@@ -23,7 +23,7 @@
 	
 	</form>
 </header>
- <body> 
+
  
  <p class="hotdog">
     <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
@@ -33,7 +33,6 @@
 <div>
 
 <h2>About Us</h2>
-<hr>
 
 
 <nav>
@@ -47,7 +46,7 @@
   </ul>
 </nav>
 
-<hr>
+
 <?php
         $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
         

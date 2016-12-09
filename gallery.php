@@ -13,7 +13,7 @@
   
 <header>
     <img src="Banner.SVG" alt="HotDogCharlies">
-	<form class="login" action="login.php" method="post" align="right">
+	<form class="login" action="login.php" method="post">
 		
 			User Name: <input type="text" name="username"  /><br>
 			Password: <input type="password" name="password"  /><br>
@@ -29,7 +29,7 @@
 <h2>Gallery</h2>
 <hr>
 
-<p>
+
 <nav>
   <ul>
     <li><a class="active" href="main.php">Home</a></li>
@@ -40,7 +40,7 @@
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-</p>
+
 <p class="hotdog">
     <img src="Hotdog.SVG" alt="Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
     <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
@@ -58,7 +58,7 @@
     foreach($rows as $row){
 ?>
         <div class="mySlides fade">
-            <img src=<?=$row['image']?> style="width:100%">
+            <img src=<?=$row['image']?> style="width:100%" alt="photo of Hot Dog Charlie's">
         </div>
 <?php
     }
@@ -109,6 +109,10 @@ function showSlides(n) {
     <input type="file" name="fileToUpload" id="fileToUpload"><br>
     <input type="submit" value="Upload Image" name="submit"><br>
 </form>
+
+<span style="display: block; margin: auto;">
+<iframe width="854" height="480" src="https://www.youtube.com/embed/HLDr_s5pcVU" allowfullscreen></iframe>
+</span>
 
 <footer>
 	<p class="footerLeft">
