@@ -35,9 +35,27 @@
 
 <hr>
 
-
 <?php
 		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+		$rows = $db->query("SELECT * FROM `Specials`");
+
+		foreach ($rows as $row) {
+?>
+<form action="menuSpecials.php" method="post">
+
+<div>
+    <textarea name="sunday" rows="10" cols="30"><?=$row['Sunday']?></textarea>
+    <textarea name="monday" rows="10" cols="30"><?=$row['Monday']?></textarea>
+    <textarea name="tuesday" rows="10" cols="30"><?=$row['Tuesday']?></textarea>
+    <textarea name="wednesday" rows="10" cols="30"><?=$row['Wednesday']?></textarea>
+    <textarea name="thursday" rows="10" cols="30"><?=$row['Thursday']?></textarea>
+    <textarea name="friday" rows="10" cols="30"><?=$row['Friday']?></textarea>
+    <textarea name="saturday" rows="10" cols="30"><?=$row['Saturday']?></textarea><br><br>
+</div>
+<input type="submit" />
+</form>
+<?php
+	}
 		
 		$rows = $db->query("SELECT `Item`, `Description` FROM `Menu`");
 		foreach($rows as $row){
