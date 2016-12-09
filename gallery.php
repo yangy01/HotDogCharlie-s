@@ -12,7 +12,7 @@
 <body>
   
 <header>
-    <img src="Banner.SVG" alt="banner">
+    <img src="Banner.SVG" alt="HotDogCharlies">
 	<form class="login" action="login.php" method="post" align="right">
 		
 			User Name: <input type="text" name="username"  /><br>
@@ -42,8 +42,8 @@
 </nav>
 </p>
 <p class="hotdog">
-    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
-    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <hr>
  
@@ -109,11 +109,6 @@ function showSlides(n) {
     <input type="file" name="fileToUpload" id="fileToUpload"><br>
     <input type="submit" value="Upload Image" name="submit"><br>
 </form>
-
-
-<span style="margin: auto;">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/HLDr_s5pcVU" frameborder="0" allowfullscreen></iframe>
-</span>
 
 <footer>
 	<p class="footerLeft">
