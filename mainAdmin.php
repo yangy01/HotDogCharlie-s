@@ -19,7 +19,7 @@
 <body>
 
 <header>
-    <h1 class="strokeme">HotDogCharlie's</h1><br>
+    <img src="Banner.SVG" alt="banner">
     <h3 class="saying">"Home of the World Famous Bacon Sauce"</h3><br>
 	<form action="logout.php" method="post">
 	
@@ -27,9 +27,6 @@
 	</form>
 </header>
 <div>
-<img src="logo.png" alt="logo">
-<hr>
-
 <p>
 <nav>
 
@@ -49,9 +46,31 @@
 </p>
 <hr>
 
+<?php
+		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+		
+		$rows = $db->query("SELECT `mission` FROM `websiteInfo`");
+		foreach($rows as $row){
+            $data = $row['mission'];
+            
+            //$data = str_replace("<br>", "\r", $data);
+?>
+			<form action="adminMain.php" method="post">
+			
+			<div>
+				<textarea name="mission" rows="20" cols="50"><?=$data?></textarea><br><br>
+			</div>
+			
+			<input type="submit" />
+			</form>
+			
+<?php
+		}
+?>
+
 <p class="left">
-    <b>At Hot Dog Charlie's</b> we believe in only using the finest quality products in our hot dogs
-	and sauces.  Customer service with a smile to brighten your day and a hot dog in every tummy :)
+     <img src="Group.JPG" alt="group" style="width: 50%;height: 50%;">
+    <?=$data?><br><br>
 </p>
 
 
