@@ -1,7 +1,7 @@
 <?php
         session_start();
         if (!isset($_SESSION['name'])) {
-            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/gallery.html");
+            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/gallery.php");
         }
 ?>
 

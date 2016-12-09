@@ -3,7 +3,7 @@
 
 <?php
 	$about = $_POST['about'];
-	$about = str_replace("", "<br>", $about);
+	$about = str_replace("\r", "<br>", $about);
     $about = mysql_real_escape_string(trim($about));
 	
 	$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");

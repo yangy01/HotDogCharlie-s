@@ -21,8 +21,8 @@
 <p>
 <nav>
   <ul>
-    <li><a class="active" href="main.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
+    <li><a class="active" href="main.php">Home</a></li>
+    <li><a href="about.php">About Us</a></li>
     <li><a href="menu.php">Menu</a></li>
     <li><a href="gallery.php">Gallery</a></li>
     <li><a href="contact.php">Contact Us</a></li>
@@ -31,12 +31,22 @@
 </nav>
 </p>
 <hr>
+<?php
+        $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+        
+        $rows = $db->query("SELECT `cater` FROM `websiteInfo`");
+        foreach($rows as $row){
+            $cater = $row['cater'];        
+            $cater = str_replace("<br>", "\r", $cater);
+        }
+?>
 
 <img src="pic4Cater.jpg" alt="cater" style="width:604px;height:328px;">
 
 <h1 class="headers">Want Hot Dog Charlie's to cater your next event?</h1>
+
 <p> 
-    Whether you are getting married, hosting a corporate event or a family reunion, you can book Hot Dog Charlie's and make the event a huge success. Contact Chuck by email or phone to lock the date and time of the event. Don't wait as Chuck's calendar fills up fast! 
+    <?=$cater?><br><br>
 </p>
 
 <div class="button4Cater">

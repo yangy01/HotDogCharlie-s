@@ -1,7 +1,7 @@
 <?php
         session_start();
         if (!isset($_SESSION['name'])) {
-            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/cater.html");
+            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/cater.php");
         }
 ?>
 
@@ -38,6 +38,33 @@
     <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <hr>
+
+<?php
+        $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+        
+        $rows = $db->query("SELECT `cater` FROM `websiteInfo`");
+        foreach($rows as $row){
+            $cater = $row['cater'];        
+            $cater = str_replace("<br>", "\r", $cater);
+?>
+            <form action="adminCater.php" method="post">
+            
+            <div>
+                <textarea name="cater" rows="20" cols="50"><?=$cater?></textarea><br><br>
+            </div>
+            
+            <input type="submit" />
+            </form>
+            
+<?php
+        }
+?>
+<img src="pic4Cater.jpg" alt="cater" style="width:604px;height:328px;">
+
+<p class="left">
+    <?=$cater?><br><br>
+</p>
+
 
 <footer>
 	<p class="footerLeft">

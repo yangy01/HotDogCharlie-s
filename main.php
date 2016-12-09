@@ -38,24 +38,32 @@
 <nav>
 
   <ul>
-    <li><a class="active" href="about.html">About Us</a></li>
+    <li><a class="active" href="about.php">About Us</a></li>
     <li><a href="menu.php">Menu</a>  </li>
-    <li><a href="cater.html">Catering</a> </li>
+    <li><a href="cater.php">Catering</a> </li>
     <li><a href="gallery.php">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a>  </li>
+    <li><a href="contact.php">Contact Us</a>  </li>
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
 </p>
 <hr>
 
+<?php
+        $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+        
+        $rows = $db->query("SELECT `mission` FROM `websiteInfo`");
+        foreach($rows as $row){
+            $data = $row['mission'];
+            
+            
+        }
+?>
+
 <p id="left">
   
     <img src="Group.JPG" alt="group" style="width: 50%;height: 50%;">
-   
-
-    <b>At Hot Dog Charlie's</b> we believe in only using the finest quality products in our hot dogs
-	and sauces.  Customer service with a smile to brighten your day and a hot dog in every tummy :)
+    <?=$data?><br><br>
 </p>
 
 

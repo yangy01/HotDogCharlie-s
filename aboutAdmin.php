@@ -1,7 +1,7 @@
 <?php
         session_start();
         if (!isset($_SESSION['name'])) {
-            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/about.html");
+            header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/about.php");
         }
 ?>
 
@@ -46,7 +46,7 @@
         $rows = $db->query("SELECT `about` FROM `websiteInfo`");
         foreach($rows as $row){
             $about = $row['about'];        
-            $about = str_replace("<br>", "", $about);
+            $about = str_replace("<br>", "\r", $about);
 ?>
             <form action="adminAboutUs.php" method="post">
             

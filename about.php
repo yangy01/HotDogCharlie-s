@@ -21,9 +21,9 @@
 <p>
 <nav>
   <ul>
-    <li><a  class="active" href="main.html">Home</a></li>
+    <li><a  class="active" href="main.php">Home</a></li>
     <li><a href="menu.php">Menu</a></li>
-    <li><a href="cater.html">Catering</a></li>
+    <li><a href="cater.php">Catering</a></li>
     <li><a href="gallery.php">Gallery</a></li>
     <li><a href="contact.php">Contact Us</a></li>
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
@@ -31,7 +31,20 @@
 </nav>
 </p>
 <hr>
+<?php
+        $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+        
+        $rows = $db->query("SELECT `about` FROM `websiteInfo`");
+        foreach($rows as $row){
+            $about = $row['about'];        
+            $about = str_replace("<br>", "\r", $about);
+        }
+?>
 
+<p class="left">
+     <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;">
+    <?=$about?><br><br>
+</p>
 
 <footer>
 	<p class="footerLeft">
