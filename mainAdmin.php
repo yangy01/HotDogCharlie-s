@@ -69,10 +69,7 @@
 ?>
 
 <p class="left">
-<<<<<<< HEAD
      <img src="Group.JPG" alt="group" style="width: 50%;height: 50%;">
-=======
->>>>>>> origin/master
     <?=$data?><br><br>
 </p>
 
