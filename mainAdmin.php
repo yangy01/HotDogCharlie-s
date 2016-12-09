@@ -20,7 +20,7 @@
 <body>
 
 <header>
-    <img src="Banner.SVG" alt="banner">
+    <img src="Banner.SVG" alt="HotDogCharlie">
     <h3 class="saying">"Home of the World Famous Bacon Sauce"</h3><br>
     
     <form action="changePass.php" method="post">
@@ -50,8 +50,8 @@
 </nav>
 </p>
 <p class="hotdog">
-    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
-    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt=Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt=Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <hr>
 

@@ -8,11 +8,8 @@
     <meta name="author" content="">
     <title>Hot Dog Charlie's</title>
 </head>
-<p class="hotdog">
-    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
-    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
-</p>
-<body>
+
+
     
 <header>
     <img src="Banner.SVG" alt="banner">
@@ -26,13 +23,19 @@
 	
 	</form>
 </header>
-    
+ <body> 
+ 
+ <p class="hotdog">
+    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+</p>
+
 <div>
 
 <h2>About Us</h2>
 <hr>
 
-<p>
+
 <nav>
   <ul>
     <li><a  class="active" href="main.php">Home</a></li>
@@ -43,7 +46,7 @@
     <li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
-</p>
+
 <hr>
 <?php
         $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");

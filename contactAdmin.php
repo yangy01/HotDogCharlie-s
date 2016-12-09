@@ -16,6 +16,11 @@
     <title>Hot Dog Charlie's</title>
 </head>
 <body>
+
+<header>
+<img src="Banner.SVG" alt="HotDogCharlie">
+</header>
+
 <div>
 
 <h2>Contact Us</h2>
@@ -40,8 +45,8 @@
 </nav>
 </p>
 <p class="hotdog">
-    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
-    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <hr>
 <img src="pic4ContactUs.jpg" alt="picture for about us" style="width:728px;height:404px;">

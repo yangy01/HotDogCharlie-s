@@ -9,13 +9,13 @@
     <title>Hot Dog Charlie's</title>
 </head>
 <p class="hotdog">
-    <img src="Hotdog.SVG" alt="dog" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
-    <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <body>
 
 <header>
-    <img src="Banner.SVG" alt="banner">
+    <img src="Banner.SVG" alt="HotDogCharlies">
 	<form class="login" action="login.php" method="post" align="right">
 		
 			User Name: <input type="text" name="username"  /><br>

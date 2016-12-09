@@ -11,7 +11,7 @@
 <body>
 	
 <header>
-    <img src="Banner.SVG" alt="banner">
+    <img src="Banner.SVG" alt="HotDogCharlies">
 	<form class="login" action="login.php" method="post" align="right">
 		
 			User Name: <input type="text" name="username"  /><br>
@@ -39,6 +39,11 @@
 	<li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
+<p class="hotdog">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
+    <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
+</p>
+
 </p>
 <hr>
 
