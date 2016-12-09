@@ -21,9 +21,11 @@
 <h2>Menu</h2>
 <hr>
 
-<form action="logout.php" method="post">
-    <input type="submit" value="logout" />
-</form>
+<div class="logout">
+	<form action="logout.php" method="post">
+		<button class="button log">logout</button>
+	</form>
+</div><br><br>
 
 <nav>
   <ul>
@@ -47,7 +49,7 @@
 
 		foreach ($rows as $row) {
 ?>
-<form action="menuSpecials.php" method="post">
+<form action="menuSpecials.php" method="post" class="submit">
 
 <div>
     <textarea name="sunday" rows="10" cols="30"><?=$row['Sunday']?></textarea>
@@ -58,7 +60,7 @@
     <textarea name="friday" rows="10" cols="30"><?=$row['Friday']?></textarea>
     <textarea name="saturday" rows="10" cols="30"><?=$row['Saturday']?></textarea><br><br>
 </div>
-<input type="submit" value="update specials"/>
+<button class="button sub">update specials</button>
 </form>
 <?php
 	}
@@ -66,7 +68,7 @@
 		$rows = $db->query("SELECT `Item`, `Description` FROM `Menu`");
 		foreach($rows as $row){
 ?>
-			<form action="menuItems.php" method="post">
+			<form action="menuItems.php" method="post" class="submit">
 			
 			<div>
 				Old Name: <input type="text" name="oldItem" value="<?=$row['Item']?>" readonly="readonly" /><br>
@@ -74,15 +76,15 @@
 				
 				<textarea name="description" rows="10" cols="30"><?=$row['Description']?></textarea><br><br>
 			</div>
+			<button class="button sub">edit menu item</button>
 			
-			<input type="submit" value="edit menu item"/>
 			</form>
 			
 <?php
-		}
+		} //<input type="submit" value="edit menu item"/>
 ?>
 
-		<form action="menuItems.php" method="post">
+		<form action="menuItems.php" method="post" class="submit">
 			
 			<div>
 				Old Name: <input type="text" name="oldItem" value="" readonly="readonly" /><br>
@@ -91,7 +93,7 @@
 				<textarea name="description" rows="10" cols="30"></textarea><br><br>
 			</div>
 			
-			<input type="submit" value="edit menu item"/>
+			<button class="button sub">edit menu item</button>
 			</form>
 
 

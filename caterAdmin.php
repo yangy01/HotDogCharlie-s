@@ -16,15 +16,17 @@
     <title>Hot Dog Charlie's</title>
 </head>
 <body>
+    
 <div>
 
 <h2>Catering</h2>
 <hr>
 
-<form action="logout.php" method="post">
-    <input type="submit" value="logout" />
-</form>
-
+<div class="logout">
+	<form action="logout.php" method="post">
+		<button class="button log">logout</button>
+	</form>
+</div><br><br>
 
 <p>
 <nav>
@@ -52,13 +54,13 @@
             $cater = $row['cater'];        
             $cater = str_replace("<br>", "\r", $cater);
 ?>
-            <form action="adminCater.php" method="post">
+            <form action="adminCater.php" method="post" class="submit">
             
             <div>
                 <textarea name="cater" rows="20" cols="50"><?=$cater?></textarea><br><br>
             </div>
             
-            <input type="submit" />
+            <button class="button sub">Submit</button>
             </form>
             
 <?php

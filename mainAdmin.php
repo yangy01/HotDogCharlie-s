@@ -9,6 +9,7 @@
 <html lang="en">
 <head>
     <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
     <meta name="description" content="Web Page Resume">
     <meta name="keywords" content="HTML">
@@ -21,10 +22,18 @@
 <header>
     <img src="Banner.SVG" alt="banner">
     <h3 class="saying">"Home of the World Famous Bacon Sauce"</h3><br>
-	<form action="logout.php" method="post">
-	
-	<input type="submit" value="logout" />
+    
+    <form action="changePass.php" method="post">
+	   Old Password: <input type="text" name="oldpass" value="" /><br>
+	   New Password: <input type="text" name="newpass" value="" /><br>
+    <input type="submit" value="Change Password" />
 	</form>
+    
+    <div class="logout">
+           <form action="logout.php" method="post">
+	           <button class="button log">logout</button>
+	       </form>
+    </div><br><br>
 </header>
 <div>
 <p>
@@ -53,15 +62,14 @@
 		foreach($rows as $row){
             $data = $row['mission'];
             
-            //$data = str_replace("<br>", "\r", $data);
 ?>
-			<form action="adminMain.php" method="post">
+			<form action="adminMain.php" method="post" class="submit">
 			
 			<div>
 				<textarea name="mission" rows="20" cols="50"><?=$data?></textarea><br><br>
 			</div>
 			
-			<input type="submit" />
+			<button class="button sub">Submit</button>
 			</form>
 			
 <?php

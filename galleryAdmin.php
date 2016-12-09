@@ -21,9 +21,11 @@
 <h2>Gallery</h2>
 <hr>
 
-<form action="logout.php" method="post">
-    <input type="submit" value="logout" />
-</form>
+<div class="logout">
+	<form action="logout.php" method="post">
+		<button class="button log">logout</button>
+	</form>
+</div><br><br>
 
 <p>
 <nav>
@@ -53,20 +55,22 @@
 <?php
     foreach($rows as $row){
 ?>
-      <form action="deletePhoto.php" method="post">
+      <form action="deletePhoto.php" method="post" class="submit">
             <img src=<?=$row['image']?> style="width:100%">
             <input type="text" name="photo" value=<?=$row['image']?> readonly/><br>
-      <input type="submit" value="delete photo" /><br>
+      <button class="button sub">delete photo</button><br>
+      
       </form>
 <?php
-    }
+    } //<input type="submit" value="delete photo" /><br> <input type="submit" value="Upload Image" name="submit"><br>
 ?>
 
 <br><br>
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="upload.php" method="post" enctype="multipart/form-data" class="submit">
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload"><br>
-    <input type="submit" value="Upload Image" name="submit"><br>
+    <button class="button sub">Upload Image</button><br>
+    
 </form>
 
 

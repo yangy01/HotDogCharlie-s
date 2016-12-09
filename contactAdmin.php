@@ -21,9 +21,11 @@
 <h2>Contact Us</h2>
 <hr>
 
-<form action="logout.php" method="post">
-    <input type="submit" value="logout" />
-</form>
+<div class="logout">
+	<form action="logout.php" method="post">
+		<button class="button log">logout</button>
+	</form>
+</div><br><br>
 
 <p>
 <nav>
@@ -42,7 +44,8 @@
     <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <hr>
-<img src="Katie.jpg" alt="kate" style="width:528px;height:504px;">
+<img src="pic4ContactUs.jpg" alt="picture for about us" style="width:728px;height:404px;">
+
 
 <?php
 		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
@@ -52,13 +55,13 @@
             $data = $row['hours'];
             $data = str_replace("<br>", "\r", $data);
 ?>
-			<form action="adminContact.php" method="post">
+			<form action="adminContact.php" method="post" class="submit">
 			
 			<div>
 				<textarea name="hours" rows="10" cols="30"><?=$data?></textarea><br><br>
 			</div>
 			
-			<input type="submit" />
+			<button class="button sub">Submit</button>
 			</form>
 			
 <?php

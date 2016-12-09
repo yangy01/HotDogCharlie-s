@@ -16,14 +16,17 @@
     <title>Hot Dog Charlie's</title>
 </head>
 <body>
+    
 <div>
 
 <h2>About Us</h2>
 <hr>
 
-<form action="logout.php" method="post">
-    <input type="submit" value="logout" />
-</form>
+<div class="logout">
+	<form action="logout.php" method="post">
+		<button class="button log">logout</button>
+	</form>
+</div><br><br>
 
 <p>
 <nav>
@@ -52,13 +55,13 @@
             $about = $row['about'];        
             $about = str_replace("<br>", "\r", $about);
 ?>
-            <form action="adminAboutUs.php" method="post">
+            <form action="adminAboutUs.php" method="post" class="submit">
             
             <div>
                 <textarea name="about" rows="20" cols="50"><?=$about?></textarea><br><br>
             </div>
             
-            <input type="submit" />
+            <button class="button sub">Submit</button>
             </form>
             
 <?php
@@ -66,7 +69,7 @@
 ?>
 
 <p class="left">
-     <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;">
+     <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;"><br>
     <?=$about?><br><br>
 </p>
 

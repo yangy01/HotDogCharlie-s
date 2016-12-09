@@ -13,6 +13,20 @@
     <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <body>
+
+<header>
+    <img src="Banner.SVG" alt="banner">
+	<form class="login" action="login.php" method="post" align="right">
+		
+			User Name: <input type="text" name="username"  /><br>
+			Password: <input type="password" name="password"  /><br>
+			
+		
+	
+	<input type="submit" value="login"/>
+	</form>
+</header>   
+ 
 <div>
 
 <h2>Event Catering</h2>
@@ -46,11 +60,13 @@
 <h1 class="headers">Want Hot Dog Charlie's to cater your next event?</h1>
 
 <p> 
-    <?=$cater?><br><br>
+    <span style="font-size:24px;">
+        <?=$cater?><br><br>
+    </span>
 </p>
 
 <div class="button4Cater">
-  <form action="contact.html">
+  <form action="contact.php">
     <button class="button buttonCater">Contact Chuck!</button>
   </form>
 </div>

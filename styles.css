@@ -253,6 +253,45 @@ th, td {
 
 .button4Cater {
     float: left;
-=======
->>>>>>> origin/master
 }
+
+.log {
+  background-color: darkgrey; 
+  color: black; 
+  border: 2px solid red;
+  font-size: 16px;
+}
+.log:hover {
+    background-color: red;
+    color: white;
+}
+
+.logout {
+    float: left;
+}
+
+.lo {
+  background-color: darkgrey; 
+  color: black; 
+  border: 2px solid red;
+  font-size: 16px;
+}
+.lo:hover {
+    background-color: red;
+    color: white;
+}
+
+
+
+.sub {
+  background-color: white; 
+  color: black; 
+  border: 2px solid green;
+  font-size: 16px;
+  border-radius: 12px;
+}
+.sub:hover {
+    background-color: green;
+    color: black;
+}
+

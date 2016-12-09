@@ -9,6 +9,20 @@
     <title>Hot Dog Charlie's</title>
 </head>
 <body>
+  
+<header>
+    <img src="Banner.SVG" alt="banner">
+	<form class="login" action="login.php" method="post" align="right">
+		
+			User Name: <input type="text" name="username"  /><br>
+			Password: <input type="password" name="password"  /><br>
+			
+		
+	
+	<input type="submit" value="login"/>
+	</form>
+</header>
+
 <div>
 
 <h2>Menu</h2>

@@ -13,6 +13,20 @@
     <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <body>
+    
+<header>
+    <img src="Banner.SVG" alt="banner">
+	<form class="login" action="login.php" method="post" align="right">
+		
+			User Name: <input type="text" name="username"  /><br>
+			Password: <input type="password" name="password"  /><br>
+			
+		
+	<button class="button lo">login</button>
+	
+	</form>
+</header>
+    
 <div>
 
 <h2>About Us</h2>
@@ -42,8 +56,11 @@
 ?>
 
 <p class="left">
-     <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;">
-    <?=$about?><br><br>
+     <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;"> <br>
+     
+     <span style="font-size:24px;">
+        <?=$about?><br><br>
+     </span>
 </p>
 
 <footer>

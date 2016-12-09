@@ -9,6 +9,20 @@
     <title>Hot Dog Charlie's</title>
 </head>
 <body>
+	
+<header>
+    <img src="Banner.SVG" alt="banner">
+	<form class="login" action="login.php" method="post" align="right">
+		
+			User Name: <input type="text" name="username"  /><br>
+			Password: <input type="password" name="password"  /><br>
+			
+		
+	
+	<input type="submit" value="login"/>
+	</form>
+</header>
+
 <div>
 
 <h2>Contact Us</h2>
@@ -28,7 +42,7 @@
 </p>
 <hr>
 
-<img src="Katie.jpg" alt="kate" style="width:528px;height:504px;">
+<img src="pic4ContactUs.jpg" alt="picture for about us" style="width:728px;height:604px;">
 
 <?php
 		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
@@ -41,7 +55,9 @@
 ?>
 
 <p class="left">
+	<span style="font-size:24px;">
     <?=$row['hours']?><br><br>
+	
 
 	E-mail me if you have any questions:<br>
 	charliefoos@gmail.com<br><br>
@@ -53,6 +69,7 @@
 	By phone: 920-230-DOGS (3647)<br>
 	Also feel free to order from Food Dudes Delivery too!! 
 	<a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Click Here!!</a>
+	</span>
 </p>
 	
 
