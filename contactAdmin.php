@@ -38,16 +38,42 @@
     <img src="Hotdog.SVG" alt="dog" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
 <hr>
+<img src="Katie.jpg" alt="kate" style="width:528px;height:504px;">
+
+<?php
+		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+		
+		$rows = $db->query("SELECT `hours` FROM `websiteInfo`");
+		foreach($rows as $row){
+            $data = $row['hours'];
+            $data = str_replace("<br>", "\r", $data);
+?>
+			<form action="adminContact.php" method="post">
+			
+			<div>
+				<textarea name="hours" rows="10" cols="30"><?=$data?></textarea><br><br>
+			</div>
+			
+			<input type="submit" />
+			</form>
+			
+<?php
+		}
+?>
 
 <p class="left">
-    9 Church Ave.<br>
-	Oshkosh, WI 54901<br><br>
-	Store Hours:<br>
-	Sunday-Monday Closed<br>
-	Tuesday-Thursday 11am-7pm<br>
-	Friday 11am-7pm or later<br>
-	Saturday 11am-7pm or later<br><br>
-	Order: 920-230-DOGS (3647)
+<?=$row['hours']?><br><br>
+	
+	E-mail me if you have any questions:<br>
+	charliefoos@gmail.com<br><br>
+	
+	You can also check my Facebook page:<br>
+	<a href="https://www.facebook.com/pages/HotDogCharlies/247261358685872">HotDogCharlie's</a><br><br>
+	
+	Order: <br>
+	By phone: 920-230-DOGS (3647)<br>
+	Also feel free to order from Food Dudes Delivery too!! 
+	<a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Click Here!!</a>
 </p>
 
 <footer>

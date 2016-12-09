@@ -30,15 +30,19 @@
 
 <img src="Katie.jpg" alt="kate" style="width:528px;height:504px;">
 
+<?php
+		$db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
+		
+		$rows = $db->query("SELECT `hours` FROM `websiteInfo`");
+		foreach($rows as $row){
+            $data = $row['hours'];
+            $data = str_replace("<br>", "\r", $data);
+        }
+?>
+
 <p class="left">
-    9 Church Ave.<br>
-	Oshkosh, WI 54901<br><br>
-	Store Hours:<br>
-	Sunday-Monday Closed<br>
-	Tuesday-Thursday 11am-7pm<br>
-	Friday 11am-7pm or later<br>
-	Saturday 11am-7pm or later<br><br>
-	
+    <?=$row['hours']?><br><br>
+
 	E-mail me if you have any questions:<br>
 	charliefoos@gmail.com<br><br>
 	
