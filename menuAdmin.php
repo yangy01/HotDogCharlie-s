@@ -21,6 +21,9 @@
 <h2>Menu</h2>
 <hr>
 
+<form action="logout.php" method="post">
+    <input type="submit" value="logout" />
+</form>
 
 <nav>
   <ul>

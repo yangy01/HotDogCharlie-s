@@ -21,6 +21,10 @@
 <h2>Contact Us</h2>
 <hr>
 
+<form action="logout.php" method="post">
+    <input type="submit" value="logout" />
+</form>
+
 <p>
 <nav>
   <ul>
