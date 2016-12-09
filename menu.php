@@ -20,8 +20,8 @@
     <li><a class="active" href="main.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="cater.html">Catering</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="gallery.php">Gallery</a></li>
+    <li><a href="contact.php">Contact Us</a></li>
 	<li><a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Food Dudes Delivery</a></li>
   </ul>
 </nav>
