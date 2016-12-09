@@ -105,7 +105,7 @@ function showSlides(n) {
 </script>
 <br><br>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
+    Got some fan photos? Submit them to our gallery!:
     <input type="file" name="fileToUpload" id="fileToUpload"><br>
     <input type="submit" value="Upload Image" name="submit"><br>
 </form>
