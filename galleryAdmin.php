@@ -49,62 +49,27 @@
     $rows = $db->query("SELECT `image` FROM `Gallery`");
 ?>
 
-<div class="slideshow-container">
+
 <?php
     foreach($rows as $row){
 ?>
-        <div class="mySlides fade">
+      <form action="deletePhoto.php" method="post">
             <img src=<?=$row['image']?> style="width:100%">
-        </div>
+            <input type="text" name="photo" value=<?=$row['image']?> readonly/><br>
+      <input type="submit" value="delete photo" /><br>
+      </form>
 <?php
     }
 ?>
 
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
+<br><br>
 <form action="upload.php" method="post" enctype="multipart/form-data">
     Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+    <input type="file" name="fileToUpload" id="fileToUpload"><br>
+    <input type="submit" value="Upload Image" name="submit"><br>
 </form>
+
+
 
 <footer>
 	<p class="footerLeft">

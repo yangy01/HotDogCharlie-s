@@ -14,6 +14,6 @@
             $rows = $db->exec("INSERT INTO `Gallery`(`image`) VALUES ('$target_file')");
         }
     }
-        header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/gallery.php");
+        header("Location:http://webdev.cs.uwosh.edu/students/meshir78/HotDogCharlies/galleryAdmin.php");
    
 ?>

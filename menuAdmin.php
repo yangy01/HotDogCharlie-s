@@ -58,7 +58,7 @@
     <textarea name="friday" rows="10" cols="30"><?=$row['Friday']?></textarea>
     <textarea name="saturday" rows="10" cols="30"><?=$row['Saturday']?></textarea><br><br>
 </div>
-<input type="submit" />
+<input type="submit" value="update specials"/>
 </form>
 <?php
 	}
@@ -75,7 +75,7 @@
 				<textarea name="description" rows="10" cols="30"><?=$row['Description']?></textarea><br><br>
 			</div>
 			
-			<input type="submit" />
+			<input type="submit" value="edit menu item"/>
 			</form>
 			
 <?php
@@ -91,7 +91,7 @@
 				<textarea name="description" rows="10" cols="30"></textarea><br><br>
 			</div>
 			
-			<input type="submit" />
+			<input type="submit" value="edit menu item"/>
 			</form>
 
 
