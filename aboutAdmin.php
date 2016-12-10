@@ -24,7 +24,6 @@
 <div>
 
 <h2>About Us</h2>
-<hr>
 
 <div class="logout">
 	<form action="logout.php" method="post">
@@ -48,7 +47,6 @@
     <img src="Hotdog.SVG" alt=Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
     <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
-<hr>
 
 
 <?php

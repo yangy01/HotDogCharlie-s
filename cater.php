@@ -24,14 +24,14 @@
 			
 		
 	
-	<input type="submit" value="login"/>
+	<button class="button lo">login</button>
 	</form>
 </header>   
  
 <div>
 
 <h2>Event Catering</h2>
-<hr>
+
 
 
 <nav>
@@ -45,7 +45,7 @@
   </ul>
 </nav>
 
-<hr>
+
 <?php
         $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
         

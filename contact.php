@@ -19,14 +19,14 @@
 			
 		
 	
-	<input type="submit" value="login"/>
+	<button class="button lo">login</button>
 	</form>
 </header>
 
 <div>
 
 <h2>Contact Us</h2>
-<hr>
+
 
 
 <nav>

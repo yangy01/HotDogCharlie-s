@@ -20,14 +20,13 @@
 			
 		
 	
-	<input type="submit" value="login"/>
+	<button class="button lo">login</button>
 	</form>
 </header>
   
 <div>
 
 <h2>Gallery</h2>
-<hr>
 
 
 <nav>
@@ -45,7 +44,7 @@
     <img src="Hotdog.SVG" alt="Weiner Man" style="left: 0px; top: 25%;position:fixed;float:left;width: 20%;height: 50%;">
     <img src="Hotdog.SVG" alt="Weiner Man" style="right: 0px; top: 25%;position:fixed;float:right;width: 20%;height: 50%;">
 </p>
-<hr>
+
  
 <?php 
     $db = new PDO("mysql:dbname=meshir78;host=localhost", "meshir78", "rmesh0484278");
@@ -111,7 +110,7 @@ function showSlides(n) {
 </form>
 
 <span style="display: block; margin: auto;">
-<iframe width="854" height="480" src="https://www.youtube.com/embed/HLDr_s5pcVU" allowfullscreen></iframe>
+<iframe width="600" height="350" src="https://www.youtube.com/embed/HLDr_s5pcVU" allowfullscreen></iframe>
 </span>
 
 <footer>

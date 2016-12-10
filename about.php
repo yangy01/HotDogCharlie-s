@@ -20,7 +20,6 @@
 			
 		
 	<button class="button lo">login</button>
-	
 	</form>
 </header>
 

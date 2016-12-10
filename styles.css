@@ -8,6 +8,7 @@ header {
     background-size: cover;
     max-width: 60%;
     margin: auto;
+    font-size: 20px;
 }
 
 
@@ -52,8 +53,8 @@ h1 {
 h2 {
 	text-align: center;
     color: black;
-	font-size: 26pt;
-	font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+	font-size: 30pt;
+	font-family: "Times New Roman";
 }
 
 p {

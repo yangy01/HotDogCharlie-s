@@ -24,7 +24,7 @@
 <div>
 
 <h2>Contact Us</h2>
-<hr>
+
 
 <div class="logout">
 	<form action="logout.php" method="post">
