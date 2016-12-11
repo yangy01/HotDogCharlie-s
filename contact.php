@@ -60,7 +60,6 @@
 ?>
 
 <p class="left">
-	<span style="font-size:24px;">
     <?=$row['hours']?><br><br>
 	
 
@@ -74,7 +73,6 @@
 	By phone: 920-230-DOGS (3647)<br>
 	Also feel free to order from Food Dudes Delivery too!! 
 	<a href="https://fooddudesdelivery.com/oshkosh/hotdogcharlies?zenid=fafb5ebcdf5be725af6b679f993b6577">Click Here!!</a>
-	</span>
 </p>
 	
 
