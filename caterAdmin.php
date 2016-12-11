@@ -69,7 +69,9 @@
 ?>
 <img src="pic4Cater.jpg" alt="cater" style="width:604px;height:328px;">
 
-<p class="left">
+<h3 class="headers">Want Hot Dog Charlie's to cater your next event?</h3>
+
+<p class="left" style="padding: 1em">
     <?=$cater?><br><br>
 </p>
 

@@ -57,7 +57,7 @@
         }
 ?>
 
-<p id="left">
+<p id="left" style="padding: 1em">
   
     <img src="Group.JPG" alt="group" style="width: 50%;height: 50%;">
     <br><br><?=$data?><br>

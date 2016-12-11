@@ -58,11 +58,12 @@
 
 <p class="left">
      <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;"> <br>
-     
-     <span style="font-size:24px;">
-        <?=$about?><br><br>
-     </span>
 </p>
+
+<p class="left" style="padding: 1em">
+    <?=$about?><br><br>
+</p>
+
 
 <footer>
 	<p class="footerLeft">

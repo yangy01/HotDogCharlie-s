@@ -58,12 +58,10 @@
 
 <img src="pic4Cater.jpg" alt="cater" style="width:604px;height:328px;">
 
-<h1 class="headers">Want Hot Dog Charlie's to cater your next event?</h1>
+<h3 class="headers">Want Hot Dog Charlie's to cater your next event?</h3>
 
-<p> 
-    <span style="font-size:24px;">
+<p class="left" style="padding: 1em"> 
         <?=$cater?><br><br>
-    </span>
 </p>
 
 <div class="button4Cater">

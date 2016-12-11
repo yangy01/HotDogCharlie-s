@@ -72,6 +72,9 @@
 
 <p class="left">
      <img src="foods.jpg" alt="food" style="width: 40%;height: 70%;"><br>
+</p>
+
+<p class ="left" style="padding: 1em">
     <?=$about?><br><br>
 </p>
 
